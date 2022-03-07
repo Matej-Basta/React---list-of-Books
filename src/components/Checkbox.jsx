@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export function Checkbox() {
+export function Checkbox({updateReadBooks}) {
     const [read, setRead] = useState("x");
 
     const toggle = () => {
@@ -12,6 +12,6 @@ export function Checkbox() {
     }
 
     return (
-        <button onClick={toggle}>{read}</button>
+        <button onClick={() => {updateReadBooks(); toggle()}}>{read}</button>
     );
 }
