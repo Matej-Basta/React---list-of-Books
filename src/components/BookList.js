@@ -8,7 +8,7 @@ export function BookList() {
     return (
        <>
         {books.map(book => {
-            return <Book key={book.isbn} title={book.title} author={book.author} url={book.website} />
+            return <Book key={book.isbn} title={book.title} author={book.author} url={book.website} description={book.description} />
         })}
         </> 
     )
